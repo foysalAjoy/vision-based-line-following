@@ -1,0 +1,2 @@
+Epochs run,Best epoch,Best val MAE,Best val loss,Final train MAE,Final LR
+31,19,0.0041,2.6e-05,0.01036,1.00e-04

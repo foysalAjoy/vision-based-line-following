@@ -1,0 +1,46 @@
+﻿project:
+  name: vision_based_line_following
+  student_name: Md Foysal Ahammad Joy
+  student_id: "REDACTED"
+  simulator: Webots
+
+simulation:
+  basic_timestep_ms: 32
+  target_control_frequency_hz: 31.25
+
+camera:
+  width: 320
+  height: 240
+  roi_start_ratio: 0.50
+  grayscale: true
+
+classical_vision:
+  gaussian_kernel_size: 5
+  threshold_value: 100
+  minimum_contour_area: 100
+
+controller:
+  base_speed: 3.0
+  maximum_speed: 6.28
+  kp: 0.0
+  ki: 0.0
+  kd: 0.0
+
+dataset:
+  image_width: 160
+  image_height: 96
+  output_directory: datasets/raw
+
+learning:
+  task: continuous_steering_regression
+  batch_size: 64
+  learning_rate: 0.001
+  epochs: 30
+
+evaluation:
+  metrics:
+    - mean_absolute_cross_track_error
+    - root_mean_squared_cross_track_error
+    - completion_rate
+    - control_smoothness
+    - processing_latency

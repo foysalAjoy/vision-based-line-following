@@ -1,0 +1,2 @@
+duration_seconds,mean_absolute_error,rmse,maximum_absolute_error,final_error,percentage_within_0.05,line_detection_rate_percentage,mean_wheel_variation
+30.016,0.021588486140724946,0.023826397716503214,0.0625,-0.00625,99.36034115138592,100.0,0.011299547974413647

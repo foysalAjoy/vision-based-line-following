@@ -1,0 +1,2 @@
+run_name,label_rows,image_files,missing_images,unlisted_images,invalid_target_rows,targets_outside_range,target_minimum,target_maximum,target_mean,target_standard_deviation,mean_absolute_target,percentage_target_below_0.05,percentage_target_0.05_to_0.15,percentage_target_at_least_0.15,error_minimum,error_maximum
+run_20260720_210122,468,468,0,0,0,0,-0.13807,0.053138,0.006714506410256407,0.028306487603204422,0.02561083974358974,98.50427350427351,1.4957264957264957,0.0,-0.0625,0.0375

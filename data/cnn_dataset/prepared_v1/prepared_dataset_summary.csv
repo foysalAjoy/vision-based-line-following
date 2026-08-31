@@ -1,0 +1,2 @@
+raw_samples,selected_source_samples,prepared_samples,selected_centre_sources,selected_non_centre_sources,target_minimum,target_maximum,target_mean,target_standard_deviation,centre_percentage,medium_percentage,strong_percentage
+778,375,750,180,195,-1.0,1.0,0.0,0.27285280168860115,48.0,27.73333333333333,24.266666666666666

@@ -1,0 +1,2 @@
+total_samples,target_minimum,target_maximum,target_mean,target_standard_deviation,negative_samples_below_minus_0.05,centre_samples_within_0.05,positive_samples_above_0.05,negative_strong_samples,positive_strong_samples,saturated_samples,percentage_within_0.05,percentage_strong
+654,-1.0,1.0,-0.00439879510703364,0.16752192547759864,91,528,35,31,23,11,80.73394495412845,8.256880733944955

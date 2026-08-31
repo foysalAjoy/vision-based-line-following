@@ -1,0 +1,2 @@
+Validation frames,Validation groups,MAE,RMSE,R2,Sign accuracy (%),Constant-predictor MAE,Improvement over baseline (%),Prediction std,Target std
+150,75,0.0041,0.00716,0.9992,100.0,0.13681,97.0,0.2514,0.2514

@@ -1,0 +1,188 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/solids/protos/SolidBox.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.11060958953477501 0.31100835056028175 0.9439487934123976 0.7206625498520389
+  position -1.1257563602899088 -0.6609424908410803 0.29223946117263666
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+E-puck {
+  translation 0.17458039073918197 0.007121354221830613 0.0199360558682104
+  rotation 0.000677243854500761 0.006312449450464226 -0.9999798469582759 0.21376174316018753
+  controller "p_line_follower"
+  controllerArgs [
+    "--offset=0.015"
+    "--quit"
+  ]
+  supervisor TRUE
+  camera_width 320
+  camera_height 240
+  turretSlot [
+    Camera {
+      translation 0.1 0 0.08
+      rotation 0 1 0 1.5708
+      name "downward camera"
+      fieldOfView 1
+      width 320
+      height 240
+      near 0.005
+    }
+    Display {
+      name "view"
+      width 320
+      height 240
+    }
+  ]
+}
+SolidBox {
+  translation 0 0 0.01
+  name "track_surface"
+  size 1.6 1.6 0.02
+  appearance PBRAppearance {
+    roughness 1
+    metalness 0
+  }
+}
+SolidBox {
+  translation -0.595 0 0.0215
+  name "curve_segment_01"
+  size 0.13 0.025 0.003
+  appearance PBRAppearance {
+    baseColor 0.01 0.01 0.01
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/default/worlds/textures/tagged_wall.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+  enableBoundingObject FALSE
+}
+SolidBox {
+  translation -0.4858 0.0096 0.0215
+  rotation 0 0 1 0.174533
+  name "curve_segment_01(1)"
+  size 0.13 0.025 0.003
+  appearance PBRAppearance {
+    baseColor 0.01 0.01 0.01
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/default/worlds/textures/tagged_wall.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+  enableBoundingObject FALSE
+}
+SolidBox {
+  translation -0.38 0.0379 0.0215
+  rotation 0 0 1 0.349066
+  name "curve_segment_01(2)"
+  size 0.13 0.025 0.003
+  appearance PBRAppearance {
+    baseColor 0.01 0.01 0.01
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/default/worlds/textures/tagged_wall.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+  enableBoundingObject FALSE
+}
+SolidBox {
+  translation -0.2741 0.0663 0.0215
+  rotation 0 0 1 0.174533
+  name "curve_segment_01(3)"
+  size 0.13 0.025 0.003
+  appearance PBRAppearance {
+    baseColor 0.01 0.01 0.01
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/default/worlds/textures/tagged_wall.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+  enableBoundingObject FALSE
+}
+SolidBox {
+  translation -0.165 0.0758 0.0215
+  name "curve_segment_01(4)"
+  size 0.13 0.025 0.003
+  appearance PBRAppearance {
+    baseColor 0.01 0.01 0.01
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/default/worlds/textures/tagged_wall.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+  enableBoundingObject FALSE
+}
+SolidBox {
+  translation -0.0558 0.0663 0.0215
+  rotation 0 0 1 -0.174533
+  name "curve_segment_01(5)"
+  size 0.13 0.025 0.003
+  appearance PBRAppearance {
+    baseColor 0.01 0.01 0.01
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/default/worlds/textures/tagged_wall.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+  enableBoundingObject FALSE
+}
+SolidBox {
+  translation 0.05 0.0379 0.0215
+  rotation 0 0 1 -0.349066
+  name "curve_segment_01(6)"
+  size 0.13 0.025 0.003
+  appearance PBRAppearance {
+    baseColor 0.01 0.01 0.01
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/default/worlds/textures/tagged_wall.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+  enableBoundingObject FALSE
+}
+SolidBox {
+  translation 0.1559 0.0096 0.0215
+  rotation 0 0 1 -0.174533
+  name "curve_segment_01(7)"
+  size 0.13 0.025 0.003
+  appearance PBRAppearance {
+    baseColor 0.01 0.01 0.01
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/default/worlds/textures/tagged_wall.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+  enableBoundingObject FALSE
+}

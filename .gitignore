@@ -1,0 +1,62 @@
+﻿# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Virtual environment
+.venv/
+venv/
+
+# IDE files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Webots temporary and generated files
+*.wbproj
+controllers/*/__pycache__/
+controllers/*/*.exe
+controllers/*/*.class
+
+# Large datasets
+datasets/raw/*
+datasets/processed/*
+!datasets/raw/.gitkeep
+!datasets/processed/.gitkeep
+
+# Trained models
+*.pt
+*.pth
+*.onnx
+*.h5
+
+# Large experiment outputs
+results/videos/*
+results/experiment_csv/*
+!results/videos/.gitkeep
+!results/experiment_csv/.gitkeep
+
+# CNN training images - large generated dataset
+data/cnn_dataset/prepared_v1/images/
+
+# Individual raw evaluation runs
+evaluation_results_final/
+
+# Extra Webots generated project files
+*.wbproj.*
+
+# Raw CNN dataset run images
+data/cnn_dataset/runs/*/images/
+
+# Intermediate processed/debug frames
+results/processed_frames/
+
+# Development evidence and intermediate experiment records
+docs/evidence_packs/
+docs/migration_environment.txt
+docs/weekly_logs/
+worlds/.*.jpg
