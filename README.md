@@ -4,6 +4,32 @@ A robotics and computer vision project investigating how an autonomous different
 
 The project was developed in Webots using an e-puck robot and compares classical image-processing approaches with CNN-based visual error estimation. A key focus is evaluating how the different perception methods behave when illumination conditions change.
 
+## Key Results
+
+The final evaluation compared classical P and PD control with a CNN+PD hybrid across repeated simulation runs.
+
+| Method | MAE (mm) | RMSE (mm) | Track Completion | Control Smoothness |
+|---|---:|---:|---:|---:|
+| P | 6.267 ± 1.783 | 9.344 ± 3.575 | 95.443% | 0.003 ± 0.001 |
+| PD | 6.392 ± 1.838 | 9.360 ± 3.587 | 95.463% | 0.005 ± 0.001 |
+| CNN+PD Hybrid | **6.262 ± 1.767** | **9.225 ± 3.509** | **98.055%** | 0.010 ± 0.001 |
+
+The CNN+PD hybrid achieved the lowest mean tracking MAE and RMSE and the highest mean track completion in the comparison, although it produced larger step-to-step control corrections than the classical controllers.
+
+![Comparison of P, PD and CNN+PD tracking performance](evaluation_summary_final/method_comparison.png)
+
+### Illumination Robustness
+
+The illumination experiments revealed different operating regions for classical and learned perception.
+
+The classical P and PD systems maintained approximately 95% track completion through the moderate illumination settings, but completion fell to approximately 8.65% from `baseColor = 16.0` onward as the fixed-threshold detector became unreliable.
+
+The CNN+PD hybrid showed the opposite limitation at the darkest tested conditions: completion was approximately 42–44% for `baseColor = 0.03–0.10`. From `baseColor = 0.3` through `30.0`, however, it maintained approximately 98.1% track completion.
+
+These results show that neither perception approach is universally superior; their reliability depends on the visual operating conditions.
+
+![Illumination robustness comparison](evaluation_summary_final/robustness_sweep.png)
+
 ## Project Overview
 
 Traditional line-following robots often rely on dedicated ground sensors. In this project, the robot instead uses a downward-facing camera to observe the track.
@@ -123,24 +149,23 @@ Additional classical controller comparison figures are available in:
 
 ```text
 vision-based-line-following/
-├── common/                     Shared controller and vision utilities
-├── config/                     Project configuration
-├── controllers/                Webots robot controllers
+├── common/                       Shared controller and vision utilities
+├── config/                       Project configuration
+├── controllers/                  Webots robot controllers
 │   ├── p_line_follower/
 │   ├── pd_line_follower/
 │   ├── cnn_pd_hybrid_final/
 │   └── dataset_*/
-├── data/                       Dataset manifests and analysis
-├── evaluation_summary_final/   Processed experiment results
-├── models_trained/             Trained CNN and training history
-├── protos/                     Webots robot PROTO files
-├── results/                    Selected plots and result tables
-├── scripts/                    Training, evaluation and analysis tools
-├── worlds/                     Webots simulation environments
-├── archive/                    Earlier experimental approaches
+├── data/                         Dataset manifests and analysis
+├── evaluation_summary_final/     Processed experiment results
+├── models_trained/               Trained CNN and training history
+├── protos/                       Webots robot PROTO files
+├── results/                      Selected plots and result tables
+├── scripts/                      Training, evaluation and analysis tools
+├── worlds/                       Webots simulation environments
+├── archive/                      Earlier experimental approaches
 ├── requirements.txt
 └── SETUP.md
-
 ```
 
 ## Main Controllers
